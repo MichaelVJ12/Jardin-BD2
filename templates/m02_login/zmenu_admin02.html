@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div container-fluid>
+        <a href="/login/admin" class="navbar-brand">Administración</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarColor01" aria-controls="navbarColor01"
+        aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown" role="button"
+                    aria-haspopup="true" aria-expanded="false">
+                    Archivo
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/tmcargos/menu" class="dropdown-item">
+                            TMCargos
+                        </a>
+                        <a href="#" class="dropdown-item">TMEmpleados</a>
+                        <a href="#" class="dropdown-item">TMaestro 3</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">TMaestro 4</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle"
+                    data-bs-target="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">
+                        Procesos
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Registrar Retardo</a>
+                        <a href="#" class="dropdown-item">Proceso 2</a>
+                        <a href="#" class="dropdown-item">Proceso 3</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">Proceso 4</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle"
+                    data-bs-target="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">
+                        Reportes
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Reporte 1</a>
+                        <a href="#" class="dropdown-item">Reporte 2</a>
+                        <a href="#" class="dropdown-item">Reporte 3</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">Reporte 4</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="/login/salir" class="nav-link">Salir</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <p class="form-control me-sm-2">
+                    &nbsp;&nbsp;
+                    <b>
+                        {{ session["xnombre"]}},
+                        &nbsp; &nbsp; &nbsp;
+                        Usuario@: {{ session["xusuario"]}}
+                    </b>
+                    &nbsp;&nbsp;
+                </p>
+            </div>
+        </div>
+    </div>
+</nav>

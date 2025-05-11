@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    {% include 'm01_sitio/zcabeza.html' %}
+    <body onload="startTime()">
+        {% include 'm02_login/zmenu_admin01.html' %}
+        {% include 'm02_login/zsub_menu.html' %}
+        <main class="container text-center">
+            <br>
+            <br>
+            <div class="p5 br-light">
+                <h1 class="display-3">
+                    {% if session["xnivel"] == 0 %}
+                        Apreciad@ <b>{{ session["xnombre"]}}<br> UD está suspendido...</b>
+                    {% else %}
+                        Bienvenid@ <b>{{session["xnombre"]}} - Usuario:{{session["xusuario"]}}</b>
+                        <br>
+                        al módulo administrativo...
+                        <p class="lead">
+                            Espacio para administrar los datos del sismeta de la empresa <strong>El Jardín</strong>
+                        </p>
+                    {% endif %}
+                </h1>
+                <hr class="my-3">
+                <p class="text-center">
+                    <a href="/login/admin" class="btn btn-danger btn-lg" role="button">
+                        Empresa
+                    </a>
+                </p>
+            </div>
+        </main>
+        <br>
+        {% include 'm01_sitio/zpie.html' %}
+    </body>
+</html>
